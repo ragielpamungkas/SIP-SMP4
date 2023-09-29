@@ -1,0 +1,15 @@
+normalisasi sebagai pembeda antara user dengan pengguna
+- user itu berfungsi sebgai penampung username dan pssword juga hak akses
+- Penggguna itu berfungsi untuk mencatat data diri dari user
+as
+kenapa harus dinoormalisai?
+karena pengguna memiliki id_pengguna dan user memiliki juga id_user
+sehingga kalau mereka dijadikan satu table maka akan merusak alur peminjaman dan pengembalia, karena id_pengguna akan dijadikan
+patokan ketika membuat invoice atau mencatat data pengembalian atau peminjaman
+
+
+// peminjaman stok buku
+CREATE TRIGGER `ai_tb_peminjaman` AFTER INSERT ON `tb_peminjaman` FOR EACH ROW update tb_buku set tb_buku.jumlah = tb_buku.jumlah-1 where tb_buku.id_buku = NEW.id_buku
+
+// pengembalian stok buku
+CREATE TRIGGER `au_tb_peminjaman` AFTER UPDATE ON `tb_peminjaman` FOR EACH ROW update tb_buku set tb_buku.jumlah = tb_buku.jumlah+1 where tb_buku.id_buku = OLD.id_buku

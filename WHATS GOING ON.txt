@@ -1,0 +1,11 @@
+my planning :
+1. form detail peminjaman terdapat id peminjaman, nisn, nama, judul buku, tanggal peminjaman
+   tanggal jatuh tempo, dan lama peminjaman
+2. form detail peminjaman ada button pengembalian yang mengarah pada form pengembalian, nah rencananya pada saat button dikembalikan
+   di klik, pada form pengembalian muncul tanggal kembali dan denda peminjam
+
+pertanyaannya : GIMANAA CARANYAAA BANGSAATTTTT
+
+kendala :
+1. pada form detail peminjaman tidak muncul nisn dan nama, serta judul buku belum bisa read only
+2. 

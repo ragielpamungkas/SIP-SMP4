@@ -1,0 +1,27 @@
+- siswa hanya bisa mencari buku, dibuatkan view sendiri
+- pencarian buku harus lengkap, status buku dipinjam atau tidak
+- petugas perpustakaan, bisa login dan viewnya hanya laporan data siswa, data buku, peminjaman, dan pengembalian
+- laporan harus bisa digunakan untuk menampilkan jumlah siswa yang meminjam, jumlah buku yang dipinjam, serta ada laporan harian atau bulanan
+- jadi sistem hanya digunakan oleh admin sama petugas perpustakaan, pada tabel pengguna ditambahkan status jabatan
+- pada tabel user, level diubah menjadi admin dan petugas perpustakaan
+- program harus disesuaikan sama DAD
+
+Fitur di mysql namanya view
+???????????
+
+laporan siswa
+nisn - nama - kelas - tempat lahir - tanggal lahir - jenis kelamin - alamat
+
+laporan buku
+judul - rak - kategori - penulis - penerbit - tahun - stok - jumlah buku yang dipinjam
+
+laporan peminjaman (jumlah siswa yang meminjam)
+nama - judul - tanggal peminjaman - tanggal jatuh tempo - lama peminjaman - jumlah buku yang dipinjam
+
+laporan pengembalian
+nama - judul - tanggal peminjaman - tanggal jatuh tempo - lama peminjaman - tanggal kembali - denda - status
+
+bagaimana caranya untuk print laporan agar bisa harian atau bulanan????
+
+
+SELECT count(tb_peminjaman.id_peminjaman) as jumlahpeminjam FROM `tb_peminjaman` WHERE status = "Dikembalikan";
